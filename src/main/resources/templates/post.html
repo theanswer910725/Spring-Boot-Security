@@ -5,10 +5,16 @@
     <title>Title</title>
   </head>
   <body>
-    <div class="blog-post">
-	  <h3 class="blog-post-title"><a href="#" th:text="${title}"></a></h3>
-	  <p class="blog-post-meta" th:text="${created}"></p>
-	  <p class="blog-post-content" th:text="${content}"></p>
+	<div class="container">
+	  <div class="post" th:each="post : ${posts}">
+	    <div class="page-header">
+	      <h3><a href="#" th:text="${post.title}"></a></h3>
+	      <!-- Thymeleaf日期格式化 -->
+	  	  <p class="blog-post-meta" th:text="${#dates.format(post.created, 'yyyy-MM-dd')}"></p>
+	    </div>
+	    <div class="post-content" th:text="${post.content}"></div>
+	    <a href="#" th:href="@{'/posts/'+${post.id}}" th:text="${post.title}"></a>
+	  </div>
 	</div>
   </body>
 </html>
