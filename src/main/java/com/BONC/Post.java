@@ -2,10 +2,16 @@ package com.BONC;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Post {
 	 private static long count = 1;
 	 private Long id;
+	 
+	 @Size(min = 2,max = 30)
 	 private String title;
+	 
+	 @Size(min = 1)
 	 private String content;
 	 private Date created;
 	 
