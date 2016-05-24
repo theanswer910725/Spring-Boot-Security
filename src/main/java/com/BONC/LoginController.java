@@ -28,4 +28,13 @@ public class LoginController {
 
         return "redirect:/";
     }
+    
+    /**
+     * 测试异常界面
+     * @return
+     */
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String testException() {
+        throw new RuntimeException("this is a test exception");
+    }
 }
