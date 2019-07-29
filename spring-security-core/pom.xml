@@ -7,6 +7,13 @@
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../spring-security-parent</relativePath>
 	</parent>
+	
+	<properties>
+		<ver.spring.social>1.1.6.RELEASE</ver.spring.social>
+		<ver.commons.lang3>3.9</ver.commons.lang3>
+		<ver.commons.collections4>4.4</ver.commons.collections4>
+		<ver.commons.beanutils>1.9.3</ver.commons.beanutils>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -29,30 +36,38 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-config</artifactId>
+			<version>${ver.spring.social}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-core</artifactId>
+			<version>${ver.spring.social}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-security</artifactId>
+			<version>${ver.spring.social}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-web</artifactId>
+			<version>${ver.spring.social}</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>${ver.commons.lang3}</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-collections</groupId>
-			<artifactId>commons-collections</artifactId>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-collections4</artifactId>
+		    <version>${ver.commons.collections4}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
+			<version>${ver.commons.beanutils}</version>
 		</dependency>
 	</dependencies>
 </project>

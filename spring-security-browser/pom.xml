@@ -7,6 +7,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../spring-security-parent</relativePath>
 	</parent>
+	
+	<properties>
+		<ver.spring.session>1.3.5.RELEASE</ver.spring.session>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -17,6 +21,7 @@
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session</artifactId>
+			<version>${ver.spring.session}</version>
 		</dependency>
 	</dependencies>
 </project>
